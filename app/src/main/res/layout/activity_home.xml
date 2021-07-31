@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorLighterBlack"
+    tools:context=".view.home.HomeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen10"
+                android:background="@color/colorMainBlack">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen10"
+                    android:layout_marginBottom="@dimen/dimen10"
+                    android:background="@color/colorMainBlack"
+                    android:fontFamily="@font/unisansheavycaps"
+                    android:textColor="@color/colorMainWhite"
+                    android:textSize="@dimen/font20"
+                    android:text="@string/app_name"/>
+
+                <EditText
+                    android:id="@+id/home_search_game"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen30"
+                    android:paddingStart="@dimen/dimen10"
+                    android:paddingEnd="@dimen/dimen10"
+                    android:ems="10"
+                    android:focusedByDefault="false"
+                    android:background="@drawable/asset_custom_input_text"
+                    android:drawableLeft="@drawable/asset_home_search"
+                    android:drawableStart="@drawable/asset_home_search"
+                    android:inputType="text"
+                    android:imeOptions="actionSearch"
+                    android:fontFamily="@font/quarklight"
+                    android:textSize="@dimen/font18"
+                    android:textColor="@color/colorMainBlack"
+                    android:textColorHint="@color/colorMainBlack"
+                    android:hint="@string/home_serach" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen10"
+                android:background="@color/colorMainBlack"
+                android:fontFamily="@font/unisansheavycaps"
+                android:textColor="@color/colorMainWhite"
+                android:textSize="@dimen/font18"
+                android:text="@string/home_hottest"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen120">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen60"
+                    android:background="@color/colorMainBlack"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/hotdealList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="@dimen/dimen10"
+                    android:layout_marginRight="@dimen/dimen10"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen10"
+                android:fontFamily="@font/unisansheavycaps"
+                android:textColor="@color/colorMainWhite"
+                android:textSize="@dimen/font18"
+                android:text="@string/home_top"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dealList"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/dimen10"
+                android:layout_marginRight="@dimen/dimen10"
+                android:layout_weight="1"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen1"
+        android:background="@color/colorWhiteGray"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/colorMainBlack"
+        app:itemIconTint="@drawable/asset_menu_selector"
+        app:itemTextColor="@drawable/asset_menu_selector"
+        android:theme="@style/Widget.BottomNavigationViewCustom"
+        app:menu="@menu/menu_navigation" />
+
+</LinearLayout>

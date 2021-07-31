@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorLightestBlack">
+
+            <ImageView
+                android:id="@+id/coverImage"
+                android:contentDescription="@string/desc_game_image"
+                android:layout_width="@dimen/dimen110"
+                android:layout_height="@dimen/dimen56"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/dealTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen8"
+                android:layout_marginEnd="@dimen/dimen8"
+                android:fontFamily="@font/unisansheavycaps"
+                android:textStyle="bold"
+                android:textColor="@color/colorMainWhite"
+                android:text="@string/game_title"
+                android:singleLine="true"
+                android:selectAllOnFocus="true"
+                android:textSize="@dimen/font16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/coverImage"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/dealRating"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/dealTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/coverImage"
+                android:layout_marginStart="@dimen/dimen8"
+                android:layout_marginEnd="@dimen/dimen8"
+                android:textSize="@dimen/font12"
+                android:fontFamily="@font/quarklight"
+                android:textColor="@color/colorMainWhite"
+                android:text="@string/game_rating"/>
+
+            <TextView
+                android:id="@+id/dealNormalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen8"
+                app:layout_constraintStart_toEndOf="@id/coverImage"
+                app:layout_constraintTop_toBottomOf="@id/dealRating"
+                android:fontFamily="@font/quarklight"
+                android:textColor="#e12f2f"
+                android:textSize="@dimen/font11"
+                android:text="@string/game_normal_price"
+                />
+
+            <TextView
+                android:id="@+id/dealPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen4"
+                android:fontFamily="@font/quarklight"
+                android:textColor="#9bd00f"
+                android:text="@string/game_deal_price"
+                android:textSize="@dimen/font11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/dealNormalPrice"
+                app:layout_constraintTop_toBottomOf="@+id/dealRating" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorMainWhite"
+                app:layout_constraintStart_toStartOf="@id/dealNormalPrice"
+                app:layout_constraintEnd_toEndOf="@id/dealNormalPrice"
+                app:layout_constraintTop_toTopOf="@id/dealNormalPrice"
+                app:layout_constraintBottom_toBottomOf="@id/dealNormalPrice"/>
+
+            <View
+                android:id="@+id/dicount_viewholder"
+                android:layout_width="@dimen/dimen30"
+                android:layout_height="@dimen/dimen15"
+                app:layout_constraintEnd_toEndOf="@id/coverImage"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="#4c6b22"/>
+
+            <TextView
+                android:id="@+id/dealDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/dicount_viewholder"
+                app:layout_constraintStart_toStartOf="@id/dicount_viewholder"
+                app:layout_constraintTop_toTopOf="@id/dicount_viewholder"
+                app:layout_constraintBottom_toBottomOf="@id/dicount_viewholder"
+                android:textSize="@dimen/font11"
+                android:textColor="#eeeeee"
+                android:text="@string/game_discount"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

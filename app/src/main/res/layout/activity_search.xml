@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorLighterBlack"
+    tools:context=".view.search.SearchActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen10"
+                android:layout_marginBottom="@dimen/dimen10"
+                android:background="@color/colorMainBlack">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/search_back_button"
+                        android:layout_width="@dimen/dimen36"
+                        android:layout_height="@dimen/dimen36"
+                        android:background="@color/colorLighterBlack"
+                        android:clickable="true"
+                        app:srcCompat="@drawable/icon_back" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen10"
+                        android:layout_marginEnd="@dimen/dimen10"
+                        android:layout_gravity="center"
+                        android:background="@color/colorMainBlack"
+                        android:fontFamily="@font/unisansheavycaps"
+                        android:textColor="@color/colorMainWhite"
+                        android:textSize="@dimen/font20"
+                        android:text="@string/app_name"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen10"
+                    android:layout_marginBottom="@dimen/dimen10"
+                    android:fontFamily="@font/quarklight"
+                    android:textColor="@color/colorMainWhite"
+                    android:textSize="@dimen/font18"
+                    android:text="Showing Results For"/>
+
+                <TextView
+                    android:id="@+id/search_game_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen10"
+                    android:fontFamily="@font/unisansheavycaps"
+                    android:textColor="@color/colorMainWhite"
+                    android:text="@string/search"
+                    android:textSize="@dimen/font16"/>
+
+            </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/searchList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="@dimen/dimen10"
+                    android:layout_marginRight="@dimen/dimen10"
+                    android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen1"
+        android:background="@color/colorWhiteGray"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/colorMainBlack"
+        app:itemIconTint="@drawable/asset_menu_selector"
+        app:itemTextColor="@drawable/asset_menu_selector"
+        android:theme="@style/Widget.BottomNavigationViewCustom"
+        app:menu="@menu/menu_navigation"/>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Game Deals</string>
+    <string name="app_slogan">Never Pay Full Price Again</string>
+    <string name="search_games">Search Games…</string>
+    <string name="more_deals">Other Deals</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="home">HOME</string>
+    <string name="search">SEARCH</string>
+    <string name="freebie">FREEBIE</string>
+    <string name="article">ARTICLE</string>
+    <string name="home_serach">Search your Games...</string>
+    <string name="home_hottest">Hottest Deal</string>
+    <string name="home_top">Top Games On Sale</string>
+    <string name="article_title">Article Title</string>
+    <string name="article_summary">Article Summary</string>
+    <string name="article_authors">Article Authors</string>
+    <string name="article_publish">Article Publish Date</string>
+    <string name="game_title">Game Title</string>
+    <string name="game_normal_price">Normal Price</string>
+    <string name="game_deal_price">Deal Price</string>
+    <string name="game_rating">Game Rating</string>
+    <string name="game_discount">-xx%</string>
+    <string name="desc_image">App Logo</string>
+    <string name="desc_article_image">Article Image</string>
+    <string name="desc_game_image">Game Image</string>
+    <string name="desc_powered">Powered By GameStop</string>
+</resources>
